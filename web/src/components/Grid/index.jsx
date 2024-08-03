@@ -1,6 +1,6 @@
-import { Table, Th, Thead, Tr } from './styles'
+import { Table, Tbody, Td, Th, Thead, Tr } from './styles'
 
-export function Grid() {
+export function Grid({ users }) {
   return (
     <Table>
       <Thead>
@@ -11,6 +11,13 @@ export function Grid() {
           <Th></Th>
         </Tr>
       </Thead>
+      <Tbody>
+        {users.map((item, i) => (
+          <Tr key={i}>
+            <Td></Td>
+          </Tr>
+        ))}
+      </Tbody>
     </Table>
   )
 }

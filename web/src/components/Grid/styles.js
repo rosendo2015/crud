@@ -24,3 +24,5 @@ export const Th = styled.th`
     ${(props) => props.onlyWeb && 'display: none'}
   }
 `
+export const Tbody = styled.tbody``
+export const Td = styled.td``
