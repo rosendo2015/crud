@@ -35,8 +35,8 @@ export function App() {
     <>
       <Container>
         <h2>Usuários</h2>
-        <Form />
-        <Grid users={users} />
+        <Form onEdit={onEdit} setOnEdit={setOnEdit} getUsers={getUsers} />
+        <Grid users={users} setUsers={setUsers} setOnEdit={setOnEdit} />
       </Container>
       <ToastContainer autoClose={2000} position={'bottom-left'} />
       <GlobalStyles />
