@@ -1,6 +1,5 @@
 import { useRef } from 'react'
 import { Button, FormContainer, Input, InputArea, Label } from './styles'
-
 export function Form({ onEdit }) {
   const ref = useRef()
   return (
@@ -14,7 +13,7 @@ export function Form({ onEdit }) {
         <Input id="email" name="email" type="email" />
       </InputArea>
       <InputArea>
-        <Label htmlFor="fone">E-Mail</Label>
+        <Label htmlFor="fone">Celular</Label>
         <Input id="fone" name="fone" type="tel" />
       </InputArea>
       <InputArea>
