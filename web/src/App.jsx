@@ -6,6 +6,7 @@ import { Form } from './components/Form'
 import { Grid } from './components/Grid'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+
 const Container = styled.div`
   width: 100%;
   max-width: 800px;
@@ -38,7 +39,7 @@ export function App() {
         <Form onEdit={onEdit} setOnEdit={setOnEdit} getUsers={getUsers} />
         <Grid users={users} setUsers={setUsers} setOnEdit={setOnEdit} />
       </Container>
-      <ToastContainer autoClose={2000} position={'bottom-left'} />
+      <ToastContainer autoClose={3000} position={'bottom-left'} />
       <GlobalStyles />
     </>
   )

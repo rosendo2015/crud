@@ -2,6 +2,7 @@ import { Table, Tbody, Td, Th, Thead, Tr } from './styles'
 import { FaTrash, FaEdit } from 'react-icons/fa'
 import { toast } from 'react-toastify'
 import axios from 'axios'
+
 export function Grid({ users, setUsers, setOnEdit }) {
   function handleEdit(item) {
     setOnEdit(item)
