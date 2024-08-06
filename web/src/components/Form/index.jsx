@@ -2,7 +2,8 @@ import { useEffect, useRef } from 'react'
 import { Button, FormContainer, Input, InputArea, Label } from './styles'
 import { toast } from 'react-toastify'
 import axios from 'axios'
-export function Form({ onEdit }) {
+
+export function Form({ onEdit, setOnEdit, getUser }) {
   const ref = useRef()
 
   useEffect(() => {
@@ -36,7 +37,7 @@ export function Form({ onEdit }) {
           fone: user.fone.value,
           data_nascimento: user.data_nascimento.value,
         })
-        .then(({ data }) => toast.soccess(data))
+        .then(({ data }) => toast.success(data))
         .catch(({ data }) => toast.error(data))
     } else {
       await axios
@@ -46,7 +47,7 @@ export function Form({ onEdit }) {
           fone: user.fone.value,
           data_nascimento: user.data_nascimento.value,
         })
-        .then(({ data }) => toast.soccess(data))
+        .then(({ data }) => toast.success(data))
         .catch(({ data }) => toast.error(data))
     }
     ;(user.nome.value = ''),

@@ -34,13 +34,13 @@ export function App() {
   }, [setUsers])
   return (
     <>
+      <GlobalStyles />
+      <ToastContainer autoClose={3000} position={'bottom-left'} />
       <Container>
         <h2>Usuários</h2>
         <Form onEdit={onEdit} setOnEdit={setOnEdit} getUsers={getUsers} />
         <Grid users={users} setUsers={setUsers} setOnEdit={setOnEdit} />
       </Container>
-      <ToastContainer autoClose={3000} position={'bottom-left'} />
-      <GlobalStyles />
     </>
   )
 }
